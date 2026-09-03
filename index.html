@@ -10,75 +10,93 @@
         box-sizing: border-box;
     }
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #0078d4, #004578);
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b5a57;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .container {
-        background: white;
-        width: 90%;
-        max-width: 500px;
-        padding: 40px;
-        border-radius: 16px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        text-align: center;
-    }
+.container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 550px;
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
 
-    h1 {
-        color: #333;
-        margin-bottom: 10px;
-    }
+h1 {
+    color: #0b5a57;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-    p {
-        color: #666;
-    }
+p {
+    color: #555;
+    line-height: 1.6;
+}
 
-    input {
-        width: 100%;
-        padding: 14px;
-        margin-top: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-size: 16px;
-    }
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #fafafa;
+}
 
-    button {
-        margin-top: 20px;
-        width: 100%;
-        padding: 14px;
-        background: #0078d4;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-    }
+input:focus {
+    border-color: #0b5a57;
+    outline: none;
+}
 
-    button:hover {
-        background: #005ea6;
-    }
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background: #4f8b79;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-    #successPage {
-        display: none;
-    }
+button:hover {
+    background: #3e7263;
+}
 
-    .winner {
-        font-size: 24px;
-        font-weight: bold;
-        color: #d83b01;
-        margin-top: 15px;
-    }
+.winner {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0b5a57;
+    margin-top: 20px;
+}
 
-    .emoji {
-        font-size: 50px;
-        margin-bottom: 15px;
-    }
+.emoji {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 18px 40px;
+    color: #0b5a57;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
 </style>
 </head>
 
