@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bekræftelse</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0078d4, #004578);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background: white;
+        width: 90%;
+        max-width: 500px;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #666;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 14px;
+        background: #0078d4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #005ea6;
+    }
+
+    #successPage {
+        display: none;
+    }
+
+    .winner {
+        font-size: 24px;
+        font-weight: bold;
+        color: #d83b01;
+        margin-top: 15px;
+    }
+
+    .emoji {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div id="formPage">
+        <h1>Bekræftelse</h1>
+        <p>Indtast dit navn for at fortsætte.</p>
+
+        <input type="text" id="nameInput" placeholder="Indtast dit navn">
+
+        <button onclick="submitForm()">Underskriv</button>
+    </div>
+
+    <div id="successPage">
+        <div class="emoji">🎾</div>
+
+        <h1>Tak for din underskrift!</h1>
+
+        <p id="signedName"></p>
+
+        <div class="winner">
+            Du har nu skrevet under på, at Michael og Roshan er bedre end dig til padel.
+        </div>
+    </div>
+
+</div>
+
+<script>
+function submitForm() {
+
+    let name = document.getElementById("nameInput").value.trim();
+
+    if(name === "") {
+        alert("Du skal indtaste dit navn.");
+        return;
+    }
+
+    document.getElementById("signedName").innerHTML =
+        "<strong>" + name + "</strong> har nu underskrevet erklæringen.";
+
+    document.getElementById("formPage").style.display = "none";
+    document.getElementById("successPage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
